@@ -6,7 +6,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  // Voici un commentaire avec accents éééccc
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
