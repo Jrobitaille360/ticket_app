@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'base/bottom_nav_bar.dart';
+
 void main() {
+
   runApp(const MyApp());
 }
 
@@ -15,11 +18,14 @@ class MyApp extends StatelessWidget {
         
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+     //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: BottomNavBar()
     );
   }
 }
 
+
+/*
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});  
   final String title;
@@ -27,12 +33,21 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+
+
+
+
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
     setState(() {    
       _counter++;
+    });
+  }
+  void _decrementCounter() {
+    setState(() {
+      _counter--;
     });
   }
 
@@ -56,11 +71,23 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          FloatingActionButton(
+          onPressed: _incrementCounter,
+          tooltip: 'Increment',
+          child: const Icon(Icons.add),
+        ),
+          FloatingActionButton(
+            onPressed: _decrementCounter,
+            tooltip: 'Decrement',
+            child: const Icon(Icons.remove),
+          ),
+        ],
+
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
+*/
